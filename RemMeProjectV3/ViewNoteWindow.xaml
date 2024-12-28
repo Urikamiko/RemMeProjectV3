@@ -1,0 +1,47 @@
+﻿<Window x:Class="RemMeProjectV3.ViewNoteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RemMeProjectV3"
+        mc:Ignorable="d"
+        Icon="/icon.png"
+        Title="Просмотр заметки" Height="450" Width="800" MinHeight="450" MinWidth="800" FontSize="16" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/fon-w.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>        
+        <Label Content="Ключи:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <RichTextBox x:Name="noteKeysTextBox" Grid.Row="0" Grid.Column="1" Margin="0 5 5 5" BorderBrush="Black" BorderThickness="2,3,2,3" IsReadOnly="True">
+            <RichTextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+        <Label Content="Содержание:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <RichTextBox x:Name="noteContentTextBox" Grid.Row="1" Grid.Column="1" Margin="0 5 5 5" BorderBrush="Black" BorderThickness="2,3,2,3" IsReadOnly="True">
+            <RichTextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+        <Button x:Name="backButton" Content="&lt;&lt;Назад" Grid.Row="2" Grid.Column="0" Click="backButton_Click" Margin="120 45 120 45" BorderBrush="Black" BorderThickness="2,3,2,3">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
